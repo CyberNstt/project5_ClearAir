@@ -19,7 +19,7 @@ popUpPhone()
 
 function popUpRequest() {
 	const backGround = document.querySelector('.wrapper');
-	const popupPhoneOpen = document.querySelector('.header_limiter_requestBtn-btn');
+	const popupPhoneOpen = document.querySelector('.header_limiter_main_requestBtn-btn');
 	const popupPhone = document.querySelector('.header_popupRequest');
 	const popupPhoneClose = document.querySelector('.header_popupRequest-closeBtn-body');
 
@@ -42,7 +42,7 @@ function menuOnScroll() {
 
 	window.addEventListener('scroll', () => {
 		let scrollTop = window.scrollY;
-		if (scrollTop > 0) {
+		if (scrollTop > 10) {
 			docHeader.classList.add('header_menu__active');
 		} else {
 			docHeader.classList.remove('header_menu__active');
@@ -52,7 +52,6 @@ function menuOnScroll() {
 menuOnScroll()
 
 // menuBurger
-
 function menuBurger() {
 	const backGround = document.querySelector('.wrapper');
 	const menu = document.querySelector('.header_menu');
@@ -151,3 +150,42 @@ document.addEventListener("DOMContentLoaded", function () {
 		phoneInput.addEventListener('paste', onPhonePaste, false);
 	}
 })
+
+// servicesSwitcher
+const ventBtn = document.querySelector('.services_listBlock_elementBtns-ventBtn');
+const condBtn = document.querySelector('.services_listBlock_elementBtns-condBtn');
+const ventUl = document.querySelector('.services_listBlock_element_ulVent');
+const ventImg = document.querySelector('.services_listBlock_element_bg-imgFirst');
+const ventImgMobile = document.querySelector('.services_listBlock_element_bg-imgMobileFirst');
+const condUl = document.querySelector('.services_listBlock_element_ulCond');
+const condImg = document.querySelector('.services_listBlock_element_bg-imgSecond');
+const condImgMobile = document.querySelector('.services_listBlock_element_bg-imgMobileSecond');
+
+ventBtn.addEventListener('click', () => {
+	condBtn.classList.remove('services_listBlock_elementBtns-condBtn__active');
+	condUl.classList.remove('services_listBlock_element_ulCond__active');
+	condImg.classList.remove('services_listBlock_element_bg-imgSecond__active');
+	ventBtn.classList.add('services_listBlock_elementBtns-ventBtn__active');
+	ventUl.classList.add('services_listBlock_element_ulVent__active');
+	ventImg.classList.add('services_listBlock_element_bg-imgFirst__active');
+
+	if (document.body.clientWidth < 950) {
+		condImgMobile.classList.remove('services_listBlock_element_bg-imgMobileSecond__active');
+		ventImgMobile.classList.add('services_listBlock_element_bg-imgMobileFirst__active');
+	}
+})
+
+condBtn.addEventListener('click', () => {
+	ventBtn.classList.remove('services_listBlock_elementBtns-ventBtn__active');
+	ventUl.classList.remove('services_listBlock_element_ulVent__active');
+	ventImg.classList.remove('services_listBlock_element_bg-imgFirst__active');
+	condBtn.classList.add('services_listBlock_elementBtns-condBtn__active');
+	condUl.classList.add('services_listBlock_element_ulCond__active');
+	condImg.classList.add('services_listBlock_element_bg-imgSecond__active');
+	if (document.body.clientWidth < 950) {
+		ventImgMobile.classList.remove('services_listBlock_element_bg-imgMobileFirst__active');
+		condImgMobile.classList.add('services_listBlock_element_bg-imgMobileSecond__active');
+	}
+})
+
+
