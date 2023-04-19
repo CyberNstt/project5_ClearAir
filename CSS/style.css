@@ -1449,3 +1449,10 @@ p, li, a, span {
 		border-radius: 0 0 50px 50px;
 	}
 }
+@media (min-width: 1441px) {
+	.services_limiter_titleText-title-span::after {
+		right: auto;
+		left: 200px;
+		transform: translate(0, -50%);
+	}
+}
