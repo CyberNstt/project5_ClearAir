@@ -432,7 +432,7 @@ p, li, a, span {
 	background: transparent;
 }
 .header_menu__active {
-	width: 100vw;
+	width: min(100vw, 1920px);
 	background: #D9FADD;
 	border-radius: 0px 0px 70px 70px;
 	z-index: 10;
@@ -452,26 +452,25 @@ p, li, a, span {
 }
 .header_menu_logo-link-img {
 	width: auto;
-	height: 4.236111vw;
+	height: min(4.236111vw, 61px);
 }
 .header_menu_nav_ul {
 	display: flex;
 }
 .header_menu_nav_ul-li {
 	margin: 0 1.388889vw;
-	font-size: 15px;
+}
+.header_menu_nav_ul-li, .header_menu_nav_ul-li-link {
 	cursor: pointer;
 	transition: 0.6s;
 	text-align: center;
+	font-size: max(1.0416667vw, 15px);
+	text-align: center;
+	color: inherit;
 }
 .header_menu_nav_ul-li:hover {
 	color: #000;
 	transform: translate(0, 2px);
-}
-.header_menu_nav_ul-li-link {
-	font-size: 15px;
-	text-align: center;
-	color: inherit;
 }
 .header_menu_connect {
 	padding: 10px;
@@ -509,8 +508,8 @@ p, li, a, span {
 	transition: 0.3s;
 }
 .header_menu_connect-btn {
-	font-size: 1.1805556vw;
-	padding: 1.3194444vw 2.986111vw;
+	font-size: min(1.1805556vw, 15px);
+	padding: min(1.3194444vw, 19px) 2.986111vw;
 	background: #5CCD6A;
 	box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
 	border-radius: 17px;
@@ -1052,7 +1051,7 @@ p, li, a, span {
 
 /* services */
 .services {
-	padding: 11.7361111vw 0 11.805556vw 10px;
+	padding: min(11.7361111vw, 169px) 0 11.805556vw 10px;
 	position: relative;
 }
 .services_limiter_titleText {
@@ -1060,8 +1059,8 @@ p, li, a, span {
 }
 .services_limiter_titleText-title, .services_limiter_titleText-title-span {
 	display: block;
-	font-size: 3.125vw;
-	line-height: 4.166667vw;
+	font-size: min(3.125vw, 45px);
+	line-height: min(4.166667vw, 60px);
 	text-transform: capitalize;
 	color: #495E4C;
 	position: relative;
@@ -1070,7 +1069,7 @@ p, li, a, span {
 .services_limiter_titleText-title-span::after {
 	content: '';
 	display: block;
-	width: 17.0138889vw;
+	width: min(17.0138889vw, 245px);
 	height: 2px;
 	background: #78C081;
 	border-radius: 1.5px;
@@ -1087,8 +1086,9 @@ p, li, a, span {
 	color: #848484;
 }
 .services_listBlock {
+	min-height: min(45.4861111vw, 655px);
 	position: absolute;
-	top: 6.944444vw;
+	top: min(6.944444vw, 100px);
 	right: 0;
 	display: flex;
 	align-items: center;
@@ -1103,7 +1103,7 @@ p, li, a, span {
 .services_listBlock_elementBtns-btn {
 	writing-mode: vertical-lr;
 	transform: rotate(180deg);
-	padding: 1.736111vw 1.66667vw 5.06944444vw;
+	padding: min(1.736111vw, 25px) min(1.66667vw, 24px) min(5.06944444vw, 73px);
 	font-size: 14px;
 	background: #FFF;
 	position: relative;
@@ -1113,7 +1113,7 @@ p, li, a, span {
 .services_listBlock_elementBtns-btn::after {
 	content: '';
 	display: block;
-	width: 2.2916667vw;
+	width: min(2.2916667vw, 33px);
 	position: absolute;
 	bottom: 25px;
 	left: 50%;
@@ -1128,7 +1128,7 @@ p, li, a, span {
 }
 .services_listBlock_elementBtns-ventBtn::after {
 	background: url('../Icons/services/fanBtnGreen.svg') 0 0/cover no-repeat;
-	height: 2.2916667vw;
+	height: min(2.2916667vw, 33px);
 	transform: translate(-50%, 0);
 }
 .services_listBlock_elementBtns-ventBtn:hover::after {
@@ -1147,7 +1147,7 @@ p, li, a, span {
 }
 .services_listBlock_elementBtns-condBtn::after {
 	background: url('../Icons/services/condBtn.svg') 0 0/cover no-repeat;
-	height: 1.875vw;
+	height: min(1.875vw, 27px);
 	transform: rotate(180deg) translate(50%, 0);
 }
 .services_listBlock_elementBtns-condBtn:hover::after {
@@ -1162,18 +1162,17 @@ p, li, a, span {
 	background: url('../Icons/services/condBtnWhite.svg') 0 0/cover no-repeat;
 }
 .services_listBlock_elementContainer {
-	min-width: 46.94444vw;
-	min-height: 45.4861111vw;
 	display: flex;
 	justify-content: space-between;
 	border-radius: 65px 0px 0px 65px;
 }
 .services_listBlock_elementulContainer {
+	min-height: min(45.4861111vw, 655px);
 	overflow: hidden;
 	position: relative;
 }
 .services_listBlock_element_ulVent, .services_listBlock_element_ulCond {
-	padding: 8.125vw 0 7.847222vw 6.1805556vw;
+	padding: min(8.125vw, 117px) 0 min(7.847222vw, 113px) min(6.1805556vw, 89px);
 	margin: 0 40px 0 0;
 	position: absolute;
 	top: 0;
@@ -1333,9 +1332,7 @@ p, li, a, span {
 		transform: rotate(0) translate(-50%, 0);
 	}
 	.services_listBlock_elementContainer {
-		min-width: auto;
 		width: 80%;
-		min-height: auto;
 		display: block;
 		border-radius: 50px;
 		overflow: hidden;
