@@ -1548,6 +1548,14 @@ p, li, a, span {
 	overflow: hidden;
 	border-radius: 25px;
 	background: #FFFFFF;
+	transition: all 0.6s;
+}
+.complexSolution_limiter_leavesAndFlex_flex_item .complexSolution_limiter_leavesAndFlex_flex_item_imgBlock-img {
+	transition: all 0.6s;
+	z-index: 0;
+}
+.complexSolution_limiter_leavesAndFlex_flex_item:hover .complexSolution_limiter_leavesAndFlex_flex_item_imgBlock-img {
+	transform: scale(115%);
 }
 .complexSolution_limiter_leavesAndFlex_flex_item_imgBlock {
 	position: relative;
@@ -1561,6 +1569,7 @@ p, li, a, span {
 	position: absolute;
 	top: 14px;
 	left: 0;
+	z-index: 1;
 }
 .complexSolution_limiter_leavesAndFlex_flex_item_imgBlock-img {
 	object-fit: cover;
